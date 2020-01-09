@@ -30,22 +30,6 @@ public class Checker {
 
 
     public static boolean isAvailable(String domain)  {
-        /*
-        URL url = new URL("https://madchecker.com/domain/api/" + domain);
-        HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
-        conn.setDoOutput(true);
-        conn.setRequestMethod("GET");
-        conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36");
-
-        BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-        String inputLine;
-        StringBuilder content = new StringBuilder();
-        while ((inputLine = in.readLine()) != null) {
-            content.append(inputLine);
-        }
-        in.close();
-        System.out.println(content);
-         */
         try {
             JSONObject json = readJsonFromUrl("https://madchecker.com/domain/api/" + domain);
             try {
